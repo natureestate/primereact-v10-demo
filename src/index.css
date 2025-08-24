@@ -4,13 +4,35 @@
 }
 
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* ใช้ Kanit สำหรับภาษาไทย และ Inter สำหรับภาษาอังกฤษ */
+  font-family: 'Kanit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* สำหรับข้อความภาษาอังกฤษเท่านั้น */
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* สำหรับข้อความภาษาไทยเท่านั้น */
+.font-kanit {
+  font-family: 'Kanit', system-ui, sans-serif;
+}
+
+/* Responsive font sizes */
+.text-thai {
+  font-family: 'Kanit', system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.text-english {
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 body {
@@ -82,5 +104,49 @@ html {
   
   .main-content {
     padding: 1rem;
+  }
+}
+
+/* Dark/Light Theme Support */
+.light-theme {
+  --custom-bg: #ffffff;
+  --custom-text: #495057;
+  --custom-border: #dee2e6;
+  --custom-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+  --custom-bg: #1e1e1e;
+  --custom-text: #ffffff;
+  --custom-border: #383838;
+  --custom-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .app-container {
+  background-color: var(--surface-900);
+  color: var(--text-color);
+}
+
+.light-theme .app-container {
+  background-color: var(--surface-ground);
+  color: var(--text-color);
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle-btn {
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(180deg);
+}
+
+/* Auto dark mode support for system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-theme):not(.dark-theme) {
+    --custom-bg: #1e1e1e;
+    --custom-text: #ffffff;
+    --custom-border: #383838;
+    --custom-shadow: rgba(0, 0, 0, 0.3);
   }
 }

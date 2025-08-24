@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import './App.css'
 
 // PrimeReact Components Import
@@ -13,7 +13,6 @@ import { Column } from 'primereact/column'
 import { Panel } from 'primereact/panel'
 import { Card } from 'primereact/card'
 import { Accordion, AccordionTab } from 'primereact/accordion'
-import { TabView, TabPanel } from 'primereact/tabview'
 import { Dialog } from 'primereact/dialog'
 import { Toast } from 'primereact/toast'
 import { Checkbox } from 'primereact/checkbox'
@@ -33,6 +32,7 @@ import { Divider } from 'primereact/divider'
 import { SelectButton } from 'primereact/selectbutton'
 import { ToggleButton } from 'primereact/togglebutton'
 import { InputSwitch } from 'primereact/inputswitch'
+import { ThemeToggle } from './components/ThemeToggle'
 
 function App() {
   // State สำหรับ Components ต่างๆ
@@ -121,7 +121,7 @@ function App() {
   ]
 
   // Helper Functions
-  const showToast = (severity, summary, detail) => {
+  const showToast = (severity: string, summary: string, detail: string) => {
     toast.current?.show({ severity, summary, detail, life: 3000 })
   }
 
@@ -135,6 +135,7 @@ function App() {
         start={<span className="font-bold">🚀 PrimeReact V10 Demo</span>}
         end={
           <div className="flex align-items-center gap-2">
+            <ThemeToggle />
             <Badge value="5" severity="danger">
               <Button icon="pi pi-bell" rounded text />
             </Badge>
@@ -147,8 +148,8 @@ function App() {
       />
 
       <div className="main-content">
-        <h1>🚀 PrimeReact V10 Components Demo</h1>
-        <p>ตัวอย่างการใช้งาน PrimeReact Components สำหรับเวอร์ชัน 10</p>
+        <h1 className="text-thai">🚀 PrimeReact V10 Components Demo</h1>
+        <p className="text-thai">ตัวอย่างการใช้งาน PrimeReact Components สำหรับเวอร์ชัน 10</p>
 
         {/* Breadcrumb */}
         <BreadCrumb model={breadcrumbItems} home={{ icon: 'pi pi-home', url: '/' }} className="mb-4" />
@@ -197,15 +198,15 @@ function App() {
 
               <div>
                 <label htmlFor="number" className="block mb-2">Input Number:</label>
-                <InputNumber 
-                  id="number"
-                  value={number} 
-                  onValueChange={(e) => setNumber(e.value)} 
-                  mode="currency" 
-                  currency="THB" 
-                  locale="th-TH"
-                  className="w-full"
-                />
+                                  <InputNumber 
+                    id="number"
+                    value={number} 
+                    onValueChange={(e) => setNumber(e.value || 0)} 
+                    mode="currency" 
+                    currency="THB" 
+                    locale="th-TH"
+                    className="w-full"
+                  />
               </div>
             </div>
 
@@ -244,7 +245,7 @@ function App() {
                 <Calendar 
                   id="calendar"
                   value={date} 
-                  onChange={(e) => setDate(e.value)} 
+                  onChange={(e) => setDate(e.value || null)} 
                   dateFormat="dd/mm/yy"
                   placeholder="เลือกวันที่"
                   className="w-full"
@@ -266,11 +267,11 @@ function App() {
               <h4>Toggle & Rating</h4>
               
               <div className="flex align-items-center">
-                <Checkbox 
-                  id="checkbox" 
-                  checked={checked} 
-                  onChange={(e) => setChecked(e.checked)} 
-                />
+                                  <Checkbox 
+                    id="checkbox" 
+                    checked={checked} 
+                    onChange={(e) => setChecked(e.checked || false)} 
+                  />
                 <label htmlFor="checkbox" className="ml-2">ยอมรับเงื่อนไข</label>
               </div>
 
@@ -319,9 +320,9 @@ function App() {
 
               <div>
                 <label className="block mb-2">Slider: {sliderValue}</label>
-                <Slider 
+                                <Slider 
                   value={sliderValue} 
-                  onChange={(e) => setSliderValue(e.value)} 
+                  onChange={(e) => setSliderValue(Array.isArray(e.value) ? e.value[0] : e.value)} 
             className="w-full"
           />
         </div>
@@ -330,7 +331,7 @@ function App() {
                 <label className="block mb-2">Rating:</label>
                 <Rating 
                   value={rating} 
-                  onChange={(e) => setRating(e.value)} 
+                  onChange={(e) => setRating(e.value || 0)} 
                   stars={5}
                   cancel
                 />
@@ -518,8 +519,8 @@ function App() {
         <Divider />
 
         <div className="text-center mt-4 p-4">
-          <h3>🎉 PrimeReact V10 Demo Complete!</h3>
-          <p>นี่คือตัวอย่างการใช้งาน PrimeReact Components หลักๆ ใน Version 10</p>
+          <h3 className="text-thai">🎉 PrimeReact V10 Demo Complete!</h3>
+          <p className="text-thai">นี่คือตัวอย่างการใช้งาน PrimeReact Components หลักๆ ใน Version 10</p>
           <div className="flex justify-content-center gap-2 mt-3">
             <Button 
               label="เอกสาร PrimeReact" 
