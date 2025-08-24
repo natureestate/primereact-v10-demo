@@ -25,8 +25,9 @@ const loadInitialTheme = () => {
   
   document.head.appendChild(themeLink)
   
-  // เพิ่ม class เริ่มต้น
+  // เพิ่ม class เริ่มต้นสำหรับ html และ body
   document.documentElement.className = theme === 'dark' ? 'dark-theme' : 'light-theme'
+  document.body.className = theme === 'dark' ? 'dark-theme' : 'light-theme'
 }
 
 // โหลด theme เมื่อเริ่มต้น

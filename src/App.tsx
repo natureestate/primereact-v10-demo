@@ -132,7 +132,7 @@ function App() {
       {/* Navigation */}
       <Menubar 
         model={menuItems} 
-        start={<span className="font-bold">🚀 PrimeReact V10 Demo</span>}
+        start={<span className="font-bold text-header">🚀 PrimeReact V10 Demo</span>}
         end={
           <div className="flex align-items-center gap-2">
             <ThemeToggle />
@@ -148,7 +148,7 @@ function App() {
       />
 
       <div className="main-content">
-        <h1 className="text-thai">🚀 PrimeReact V10 Components Demo</h1>
+        <h1 className="text-header">🚀 PrimeReact V10 Components Demo</h1>
         <p className="text-thai">ตัวอย่างการใช้งาน PrimeReact Components สำหรับเวอร์ชัน 10</p>
 
         {/* Breadcrumb */}
@@ -519,7 +519,7 @@ function App() {
         <Divider />
 
         <div className="text-center mt-4 p-4">
-          <h3 className="text-thai">🎉 PrimeReact V10 Demo Complete!</h3>
+          <h3 className="text-header">🎉 PrimeReact V10 Demo Complete!</h3>
           <p className="text-thai">นี่คือตัวอย่างการใช้งาน PrimeReact Components หลักๆ ใน Version 10</p>
           <div className="flex justify-content-center gap-2 mt-3">
             <Button 

@@ -4,8 +4,8 @@
 }
 
 :root {
-  /* ใช้ Kanit สำหรับภาษาไทย และ Inter สำหรับภาษาอังกฤษ */
-  font-family: 'Kanit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* ใช้ Sarabun สำหรับภาษาไทย และ Inter สำหรับภาษาอังกฤษ */
+  font-family: 'Sarabun', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
@@ -19,20 +19,31 @@
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* สำหรับข้อความภาษาไทยเท่านั้น */
+/* สำหรับ Header ใช้ Kanit */
 .font-kanit {
   font-family: 'Kanit', system-ui, sans-serif;
 }
 
+/* สำหรับ Components ภาษาไทยใช้ Sarabun */
+.font-sarabun {
+  font-family: 'Sarabun', system-ui, sans-serif;
+}
+
 /* Responsive font sizes */
 .text-thai {
-  font-family: 'Kanit', system-ui, sans-serif;
+  font-family: 'Sarabun', system-ui, sans-serif;
   letter-spacing: 0.01em;
 }
 
 .text-english {
   font-family: 'Inter', system-ui, sans-serif;
   letter-spacing: -0.01em;
+}
+
+/* Header font */
+.text-header {
+  font-family: 'Kanit', system-ui, sans-serif;
+  font-weight: 600;
 }
 
 body {
@@ -113,6 +124,8 @@ html {
   --custom-text: #495057;
   --custom-border: #dee2e6;
   --custom-shadow: rgba(0, 0, 0, 0.1);
+  --main-bg: #f8f9fa;
+  --content-bg: #ffffff;
 }
 
 .dark-theme {
@@ -120,16 +133,44 @@ html {
   --custom-text: #ffffff;
   --custom-border: #383838;
   --custom-shadow: rgba(0, 0, 0, 0.3);
+  --main-bg: #121212;
+  --content-bg: #1e1e1e;
+}
+
+/* Background สำหรับ body และ app container */
+body.dark-theme,
+html.dark-theme {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+body.light-theme,
+html.light-theme {
+  background-color: #f8f9fa !important;
+  color: #495057 !important;
 }
 
 .dark-theme .app-container {
-  background-color: var(--surface-900);
-  color: var(--text-color);
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  min-height: 100vh;
 }
 
 .light-theme .app-container {
-  background-color: var(--surface-ground);
-  color: var(--text-color);
+  background-color: #f8f9fa !important;
+  color: #495057 !important;
+  min-height: 100vh;
+}
+
+/* Main content area */
+.dark-theme .main-content {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-theme .main-content {
+  background-color: #f8f9fa;
+  color: #495057;
 }
 
 /* Theme Toggle Button Styling */

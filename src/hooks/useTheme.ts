@@ -19,13 +19,18 @@ export const useTheme = () => {
   // อัปเดต CSS variables และ localStorage เมื่อ theme เปลี่ยน
   useEffect(() => {
     const root = document.documentElement
+    const body = document.body
     
     if (theme === 'dark') {
       root.classList.add('dark-theme')
       root.classList.remove('light-theme')
+      body.classList.add('dark-theme')
+      body.classList.remove('light-theme')
     } else {
       root.classList.add('light-theme')
       root.classList.remove('dark-theme')
+      body.classList.add('light-theme')
+      body.classList.remove('dark-theme')
     }
 
     localStorage.setItem('theme', theme)
