@@ -182,6 +182,222 @@ html.light-theme {
   transform: rotate(180deg);
 }
 
+/* PrimeReact Components Font Override */
+.p-inputtext,
+.p-inputtextarea,
+.p-dropdown-label,
+.p-multiselect-label,
+.p-calendar input,
+.p-inputnumber-input,
+.p-password-input,
+.p-autocomplete-input,
+.p-chips-input-token,
+.p-listbox-item,
+.p-dropdown-item,
+.p-multiselect-item {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Placeholder font override */
+.p-inputtext::placeholder,
+.p-inputtextarea::placeholder,
+.p-password-input::placeholder,
+.p-inputnumber-input::placeholder,
+.p-autocomplete-input::placeholder {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+  font-style: normal;
+}
+
+/* DataTable font override */
+.p-datatable,
+.p-datatable .p-datatable-thead th,
+.p-datatable .p-datatable-tbody td,
+.p-datatable .p-paginator,
+.p-datatable .p-column-header-content,
+.p-datatable .p-sortable-column .p-column-title {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Breadcrumb font override */
+.p-breadcrumb,
+.p-breadcrumb .p-breadcrumb-list li,
+.p-breadcrumb .p-breadcrumb-list li a,
+.p-breadcrumb .p-breadcrumb-list li span {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Menu components font override */
+.p-menubar,
+.p-menubar .p-menuitem-text,
+.p-menubar .p-menuitem-link,
+.p-menu,
+.p-menu .p-menuitem-text,
+.p-tieredmenu .p-menuitem-text,
+.p-contextmenu .p-menuitem-text {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Card and Panel components */
+.p-card,
+.p-card .p-card-title,
+.p-card .p-card-subtitle,
+.p-card .p-card-content,
+.p-panel .p-panel-header,
+.p-panel .p-panel-content,
+.p-fieldset .p-fieldset-legend,
+.p-fieldset .p-fieldset-content {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Accordion font override */
+.p-accordion,
+.p-accordion .p-accordion-header a,
+.p-accordion .p-accordion-content {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Button font override */
+.p-button,
+.p-button .p-button-label,
+.p-splitbutton .p-button-label,
+.p-selectbutton .p-button-label {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Dialog font override */
+.p-dialog,
+.p-dialog .p-dialog-header,
+.p-dialog .p-dialog-title,
+.p-dialog .p-dialog-content {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Toast font override */
+.p-toast,
+.p-toast .p-toast-message,
+.p-toast .p-toast-summary,
+.p-toast .p-toast-detail {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Dropdown and MultiSelect options */
+.p-dropdown-panel,
+.p-multiselect-panel,
+.p-calendar-panel,
+.p-autocomplete-panel {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Checkbox and Radio labels */
+.p-checkbox-label,
+.p-radiobutton-label {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Chips and Tags */
+.p-chip,
+.p-chip .p-chip-text,
+.p-tag {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Progress and other display components */
+.p-progressbar,
+.p-skeleton,
+.p-badge {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Additional PrimeReact components */
+.p-tabview,
+.p-tabview .p-tabview-nav li a,
+.p-tabview .p-tabview-panel,
+.p-splitter,
+.p-divider,
+.p-toolbar,
+.p-steps,
+.p-steps .p-steps-item .p-steps-title,
+.p-timeline,
+.p-timeline .p-timeline-event-content,
+.p-overlaypanel,
+.p-sidebar,
+.p-tooltip,
+.p-confirmdialog,
+.p-confirmpopup {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Pagination components */
+.p-paginator,
+.p-paginator .p-paginator-pages,
+.p-paginator .p-paginator-page,
+.p-paginator .p-paginator-current,
+.p-paginator .p-dropdown-label {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Rating and slider components */
+.p-rating,
+.p-slider,
+.p-knob {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Tree and organization chart */
+.p-tree,
+.p-tree .p-treenode-label,
+.p-organizationchart,
+.p-organizationchart .p-organizationchart-node-content {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* File upload */
+.p-fileupload,
+.p-fileupload .p-fileupload-buttonbar,
+.p-fileupload .p-fileupload-content {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Image and galleria */
+.p-image,
+.p-galleria,
+.p-carousel {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* All text content in PrimeReact components */
+.p-component {
+  font-family: 'Sarabun', system-ui, sans-serif;
+}
+
+/* Specific override for input elements and their labels */
+input[class*="p-"],
+textarea[class*="p-"],
+select[class*="p-"],
+label[for*="p-"],
+.p-float-label label {
+  font-family: 'Sarabun', system-ui, sans-serif !important;
+}
+
+/* Exception: Headers should still use Kanit font */
+.text-header,
+h1.text-header,
+h2.text-header,
+h3.text-header,
+h4.text-header,
+h5.text-header,
+h6.text-header {
+  font-family: 'Kanit', system-ui, sans-serif !important;
+  font-weight: 600;
+}
+
+/* Exception: Menubar start content (header) should use Kanit */
+.p-menubar .p-menubar-start,
+.p-menubar .p-menubar-start span {
+  font-family: 'Kanit', system-ui, sans-serif !important;
+  font-weight: 600;
+}
+
 /* Auto dark mode support for system preference */
 @media (prefers-color-scheme: dark) {
   :root:not(.light-theme):not(.dark-theme) {
