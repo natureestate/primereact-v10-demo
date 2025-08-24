@@ -1,0 +1,321 @@
+/* PrimeReact V10 App Styles */
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--surface-ground);
+}
+
+.main-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .grid-cols-2,
+  .grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Custom Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .lg\\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .md\\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .md\\:col-span-2 {
+    grid-column: span 2;
+  }
+}
+
+/* Custom Component Styling */
+.app-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.app-container h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.app-container h4 {
+  color: var(--text-color-secondary);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Card Enhancements */
+.p-card .p-card-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.p-card .p-card-content {
+  padding-top: 0;
+}
+
+/* Button Enhancements */
+.p-button {
+  border-radius: var(--border-radius);
+}
+
+.p-button.p-button-sm {
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+}
+
+/* DataTable Enhancements */
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: var(--surface-100);
+  border-bottom: 1px solid var(--surface-300);
+  font-weight: 600;
+}
+
+.p-datatable .p-datatable-tbody > tr:nth-child(even) {
+  background-color: var(--surface-50);
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: var(--surface-100);
+}
+
+/* Form Enhancements */
+.p-inputtext,
+.p-dropdown,
+.p-multiselect,
+.p-calendar,
+.p-inputtextarea,
+.p-inputnumber {
+  border-radius: var(--border-radius);
+}
+
+.p-inputtext:focus,
+.p-dropdown:not(.p-disabled):hover,
+.p-multiselect:not(.p-disabled):hover,
+.p-calendar:not(.p-disabled) .p-inputtext:hover {
+  border-color: var(--primary-color);
+}
+
+/* Panel Enhancements */
+.p-panel .p-panel-header {
+  background-color: var(--surface-100);
+  border-bottom: 1px solid var(--surface-300);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.p-panel .p-panel-content {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/* Accordion Enhancements */
+.p-accordion .p-accordion-tab .p-accordion-header .p-accordion-header-link {
+  border-radius: var(--border-radius);
+  margin-bottom: 0.25rem;
+}
+
+/* Toast Positioning */
+.p-toast {
+  z-index: 9999;
+}
+
+/* Menubar Enhancements */
+.p-menubar {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.p-menubar .p-menubar-start {
+  font-size: 1.25rem;
+}
+
+/* Badge in Menubar */
+.p-badge {
+  font-size: 0.75rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Avatar */
+.p-avatar {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .p-menubar .p-menubar-start {
+    font-size: 1rem;
+  }
+  
+  .p-dialog {
+    width: 95vw !important;
+    max-width: 95vw !important;
+  }
+  
+  .p-card {
+    margin-bottom: 1rem;
+  }
+  
+  .flex-wrap {
+    flex-direction: column;
+  }
+  
+  .flex-wrap > * {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Loading States */
+.p-component-overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.p-progress-spinner-svg {
+  animation: p-progress-spinner-rotate 2s linear infinite;
+}
+
+@keyframes p-progress-spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Theme Variables Override */
+:root {
+  --border-radius: 6px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    background-color: var(--surface-900);
+  }
+}
